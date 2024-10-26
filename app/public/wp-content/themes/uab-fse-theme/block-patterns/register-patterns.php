@@ -3,6 +3,11 @@
  * Register Block Patterns for UAB FSE Theme
  */
 
+/**
+ * Register block patterns for the UAB FSE theme.
+ *
+ * @return void
+ */
 function uab_fse_theme_register_block_patterns() {
     register_block_pattern(
         'uab-fse-theme/dragonscale-hero',
@@ -61,7 +66,7 @@ function uab_fse_theme_register_block_patterns() {
                         <h2 class="wp-block-heading has-dragons-lair-green-color has-text-color">Education</h2>
                         <!-- /wp:heading -->
                         <!-- wp:paragraph -->
-                        <p>Find your path to success through UAB's academic programs.</p>
+                        <p>Find your path to success through UAB\'s academic programs.</p>
                         <!-- /wp:paragraph -->
                         <!-- wp:buttons -->
                         <div class="wp-block-buttons">
@@ -102,22 +107,22 @@ function uab_fse_theme_register_block_patterns() {
             'title'       => __( 'Dragonscale Footer', 'uab-fse-theme' ),
             'description' => __( 'A four-column footer with contact information and links', 'uab-fse-theme' ),
             'content'     => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem"}}},"backgroundColor":"dragons-lair-green","textColor":"white","layout":{"type":"constrained"}} -->
-            <div class="wp-block-group alignfull has-white-color has-dragons-lair-green-background-color has-text-color has-background" style="padding-top:2rem;padding-bottom:2rem">
-                <!-- wp:columns {"align":"wide"} -->
-                <div class="wp-block-columns alignwide">
-                    <!-- wp:column -->
-                    <div class="wp-block-column">
-                        <!-- wp:heading {"level":3} -->
-                        <h3 class="wp-block-heading">University Relations</h3>
-                        <!-- /wp:heading -->
-                        <!-- wp:paragraph -->
-                        <p>Administration Building 660<br>1720 2ND Avenue South<br>Birmingham, AL 35294-0106</p>
-                        <!-- /wp:paragraph -->
-                        <!-- wp:buttons -->
-                        <div class="wp-block-buttons">
-                            <!-- wp:button {"backgroundColor":"smoke-gray"} -->
-                            <div class="wp-block-button"><a class="wp-block-button__link has-smoke-gray-background-color has-background wp-element-button">Contact Us</a></div>
-                            <!-- /wp:button -->
+<div class="wp-block-group alignfull has-white-color has-dragons-lair-green-background-color has-text-color has-background" style="padding-top:2rem;padding-bottom:2rem">
+    <!-- wp:columns {"align":"wide"} -->
+    <div class="wp-block-columns alignwide">
+        <!-- wp:column -->
+        <div class="wp-block-column">
+            <!-- wp:heading {"level":3} -->
+            <h3 class="wp-block-heading">University Relations</h3>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>Administration Building 660<br>1720 2ND Avenue South<br>Birmingham, AL 35294-0106</p>
+            <!-- /wp:paragraph -->
+            <!-- wp:buttons -->
+            <div class="wp-block-buttons">
+                <!-- wp:button {"backgroundColor":"smoke-gray"} -->
+                <div class="wp-block-button"><a class="wp-block-button__link has-smoke-gray-background-color has-background wp-element-button">Contact Us</a></div>
+                <!-- /wp:button -->
                         </div>
                         <!-- /wp:buttons -->
                     </div>
