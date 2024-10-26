@@ -1,0 +1,189 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "palette": [
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "slug": "black",
+          "color": "#000000"
+        },
+        {
+          "name": "Dragon's Lair Green",
+          "slug": "dragons-lair-green",
+          "color": "#002c17"
+        },
+        {
+          "name": "UAB Green",
+          "slug": "uab-green",
+          "color": "#1c5420"
+        },
+        {
+          "name": "UAB Gold",
+          "slug": "uab-gold",
+          "color": "#fdb913"
+        },
+        {
+          "name": "Campus Green",
+          "slug": "campus-green",
+          "color": "#80bc00"
+        },
+        {
+          "name": "Loyal Yellow",
+          "slug": "loyal-yellow",
+          "color": "#ffd400"
+        },
+        {
+          "name": "Blaze Gold",
+          "slug": "blaze-gold",
+          "color": "#aa9767"
+        },
+        {
+          "name": "Smoke Gray",
+          "slug": "smoke-gray",
+          "color": "#808285"
+        }
+      ],
+      "gradients": [
+        {
+          "name": "Web Metallic Gold Gradation",
+          "slug": "metallic-gold-gradation",
+          "gradient": "linear-gradient(135deg, #fdb913 0%, #fde490 100%)"
+        }
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Aktiv Grotesk\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", sans-serif",
+          "slug": "primary",
+          "name": "Primary"
+        },
+        {
+          "fontFamily": "proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+          "slug": "sans",
+          "name": "Sans"
+        },
+        {
+          "fontFamily": "kulturista-web, ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif",
+          "slug": "serif",
+          "name": "Serif"
+        },
+        {
+          "fontFamily": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Courier New\", monospace",
+          "slug": "mono",
+          "name": "Mono"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "xs",
+          "size": "0.75rem",
+          "name": "Extra Small"
+        },
+        {
+          "slug": "sm",
+          "size": "0.875rem",
+          "name": "Small"
+        },
+        {
+          "slug": "base",
+          "size": "1rem",
+          "name": "Base"
+        },
+        {
+          "slug": "lg",
+          "size": "1.125rem",
+          "name": "Large"
+        },
+        {
+          "slug": "xl",
+          "size": "1.25rem",
+          "name": "Extra Large"
+        },
+        {
+          "slug": "2xl",
+          "size": "1.5rem",
+          "name": "2X Large"
+        },
+        {
+          "slug": "3xl",
+          "size": "1.875rem",
+          "name": "3X Large"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1100px"
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true,
+      "units": ["px", "em", "rem", "%", "vw", "vh"]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--white)",
+      "text": "var(--wp--preset--color--black)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--primary)",
+      "fontSize": "var(--wp--preset--font-size--base)",
+      "lineHeight": "1.6"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--uab-green)"
+        },
+        "typography": {
+          "textDecoration": "none"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--uab-green)",
+          "text": "var(--wp--preset--color--white)"
+        },
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--base)",
+          "fontWeight": "600"
+        },
+        "border": {
+          "radius": "0.25rem"
+        }
+      }
+    }
+  },
+  "customTemplates": [
+    {
+      "name": "page-without-header",
+      "title": "Page without header"
+    }
+  ],
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}
