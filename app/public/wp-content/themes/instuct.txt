@@ -1,0 +1,351 @@
+ use this `theme.json` configuration with a WordPress Full Site Editing (FSE) theme, I'll guide you through creating the essential block-based templates and patterns that align with the theme's color palette, typography, and layout settings specified in the file.
+
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "palette": [
+        {
+          "name": "White",
+          "slug": "white",
+          "color": "#ffffff"
+        },
+        {
+          "name": "Black",
+          "slug": "black",
+          "color": "#000000"
+        },
+        {
+          "name": "Dragon's Lair Green",
+          "slug": "dragons-lair-green",
+          "color": "#002c17"
+        },
+        {
+          "name": "UAB Green",
+          "slug": "uab-green",
+          "color": "#1c5420"
+        },
+        {
+          "name": "UAB Gold",
+          "slug": "uab-gold",
+          "color": "#fdb913"
+        },
+        {
+          "name": "Campus Green",
+          "slug": "campus-green",
+          "color": "#80bc00"
+        },
+        {
+          "name": "Loyal Yellow",
+          "slug": "loyal-yellow",
+          "color": "#ffd400"
+        },
+        {
+          "name": "Blaze Gold",
+          "slug": "blaze-gold",
+          "color": "#aa9767"
+        },
+        {
+          "name": "Smoke Gray",
+          "slug": "smoke-gray",
+          "color": "#808285"
+        }
+      ],
+      "gradients": [
+        {
+          "name": "Web Metallic Gold Gradation",
+          "slug": "metallic-gold-gradation",
+          "gradient": "linear-gradient(135deg, #fdb913 0%, #fde490 100%)"
+        }
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Aktiv Grotesk\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", sans-serif",
+          "slug": "primary",
+          "name": "Primary"
+        },
+        {
+          "fontFamily": "proxima-nova, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+          "slug": "sans",
+          "name": "Sans"
+        },
+        {
+          "fontFamily": "kulturista-web, ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif",
+          "slug": "serif",
+          "name": "Serif"
+        },
+        {
+          "fontFamily": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Courier New\", monospace",
+          "slug": "mono",
+          "name": "Mono"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "xs",
+          "size": "0.75rem",
+          "name": "Extra Small"
+        },
+        {
+          "slug": "sm",
+          "size": "0.875rem",
+          "name": "Small"
+        },
+        {
+          "slug": "base",
+          "size": "1rem",
+          "name": "Base"
+        },
+        {
+          "slug": "lg",
+          "size": "1.125rem",
+          "name": "Large"
+        },
+        {
+          "slug": "xl",
+          "size": "1.25rem",
+          "name": "Extra Large"
+        },
+        {
+          "slug": "2xl",
+          "size": "1.5rem",
+          "name": "2X Large"
+        },
+        {
+          "slug": "3xl",
+          "size": "1.875rem",
+          "name": "3X Large"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1100px"
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true,
+      "units": ["px", "em", "rem", "%", "vw", "vh"]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--white)",
+      "text": "var(--wp--preset--color--black)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--primary)",
+      "fontSize": "var(--wp--preset--font-size--base)",
+      "lineHeight": "1.6"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--uab-green)"
+        },
+        "typography": {
+          "textDecoration": "none"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--uab-green)",
+          "text": "var(--wp--preset--color--white)"
+        },
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--base)",
+          "fontWeight": "600"
+        },
+        "border": {
+          "radius": "0.25rem"
+        }
+      }
+    }
+  },
+  "customTemplates": [
+    {
+      "name": "page-without-header",
+      "title": "Page without header"
+    }
+  ],
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}
+
+
+Here's how to structure the theme in a way that utilizes the colors, fonts, and spacings defined in your `theme.json` file.
+
+### Folder Structure
+
+1. Create a theme directory named `my-fse-theme`.
+2. Inside it, add the following structure:
+
+   ```plaintext
+   my-fse-theme/
+   ├── block-patterns/
+   │   ├── header.php
+   │   ├── banner.php
+   │   ├── content-section.php
+   │   ├── latest-news.php
+   │   ├── upcoming-events.php
+   │   └── footer.php
+   ├── templates/
+   │   ├── index.html
+   │   ├── single.html
+   │   └── page.html
+   ├── parts/
+   │   ├── header.html
+   │   └── footer.html
+   ├── theme.json
+   └── style.css
+   ```
+
+3. Place the `theme.json` file you've provided in the theme’s root directory.
+
+### Implementing `theme.json`
+
+The `theme.json` file provides settings for colors, fonts, and layout options. Here’s how to use these settings in your templates and block patterns.
+
+#### Step 1: `theme.json` Customization
+
+The file already includes colors, typography, layout, and spacing settings. WordPress will automatically use these settings to apply styles to blocks. You don’t need to write CSS manually for these aspects, as WordPress FSE will handle it.
+
+#### Step 2: Block Patterns
+
+Let's create PHP files in the `block-patterns` folder to define reusable blocks like the header, banner, content section, latest news, and upcoming events. 
+
+**Example Block Pattern for `header.php`:**
+
+```php
+<?php
+register_block_pattern(
+    'my-fse-theme/header',
+    array(
+        'title'       => __('Header', 'my-fse-theme'),
+        'description' => __('The header section with navigation and title', 'my-fse-theme'),
+        'content'     => '<!-- wp:group {"align":"full","backgroundColor":"dragons-lair-green","textColor":"white"} -->
+        <div class="wp-block-group alignfull has-dragons-lair-green-background-color has-white-color has-text-color has-background">
+            <!-- wp:site-title {"textAlign":"center"} /-->
+            <!-- wp:navigation {"textColor":"white"} /-->
+        </div>
+        <!-- /wp:group -->',
+    )
+);
+```
+
+**Example Block Pattern for `banner.php`:**
+
+```php
+<?php
+register_block_pattern(
+    'my-fse-theme/banner',
+    array(
+        'title'       => __('Banner', 'my-fse-theme'),
+        'description' => __('Main banner section with title and links', 'my-fse-theme'),
+        'content'     => '<!-- wp:group {"align":"full","backgroundColor":"uab-green","textColor":"white"} -->
+        <div class="wp-block-group alignfull has-uab-green-background-color has-white-color has-text-color has-background">
+            <!-- wp:heading {"textAlign":"center"} -->
+            <h2 class="has-text-align-center">This is the banner title</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph {"align":"center"} -->
+            <p class="has-text-align-center">This is the banner description</p>
+            <!-- /wp:paragraph -->
+            <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+            <div class="wp-block-buttons">
+                <!-- wp:button {"backgroundColor":"loyal-yellow","textColor":"uab-green"} -->
+                <div class="wp-block-button"><a class="wp-block-button__link has-uab-green-color has-loyal-yellow-background-color has-text-color has-background">Link 1</a></div>
+                <!-- /wp:button -->
+                <!-- Repeat button for additional links -->
+            </div>
+            <!-- /wp:buttons -->
+        </div>
+        <!-- /wp:group -->',
+    )
+);
+```
+
+**Other Block Patterns**:
+Repeat similar patterns for `content-section.php`, `latest-news.php`, and `upcoming-events.php` using the colors and settings specified in your `theme.json`.
+
+#### Step 3: Template Parts
+
+Create HTML files for `header.html` and `footer.html` inside the `parts` directory to define the main header and footer structure.
+
+**Example `header.html`:**
+
+```html
+<!-- wp:group {"align":"full","backgroundColor":"dragons-lair-green","textColor":"white"} -->
+<div class="wp-block-group alignfull has-dragons-lair-green-background-color has-white-color has-text-color has-background">
+    <!-- wp:site-title /-->
+    <!-- wp:navigation /-->
+</div>
+<!-- /wp:group -->
+```
+
+**Example `footer.html`:**
+
+```html
+<!-- wp:group {"align":"full","backgroundColor":"uab-green","textColor":"white","padding":{"top":"20px","bottom":"20px"}} -->
+<div class="wp-block-group alignfull has-uab-green-background-color has-white-color has-text-color has-background" style="padding-top:20px;padding-bottom:20px;">
+    <!-- wp:paragraph {"align":"center"} -->
+    <p class="has-text-align-center">University Relations | Contact Us</p>
+    <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+```
+
+#### Step 4: Templates
+
+Create templates for `index.html`, `single.html`, and `page.html` in the `templates` directory.
+
+**Example `index.html` Template:**
+
+```html
+<!-- wp:template-part {"slug":"header","theme":"my-fse-theme","tagName":"header"} /-->
+
+<!-- wp:group {"align":"wide","layout":{"contentSize":"800px"}} -->
+<div class="wp-block-group alignwide">
+    <!-- Your main content loop will go here -->
+    <!-- wp:post-title {"level":1} /-->
+    <!-- wp:post-content /-->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"my-fse-theme","tagName":"footer"} /-->
+```
+
+### Step 5: Enqueue Styles (if needed)
+
+In your theme’s `functions.php`, enqueue any additional CSS if necessary, although the `theme.json` settings should handle most styling. 
+
+```php
+<?php
+function my_fse_theme_enqueue_styles() {
+    wp_enqueue_style( 'my-fse-theme-style', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'my_fse_theme_enqueue_styles' );
+```
+
+### Step 6: Activating the Theme
+
+Once everything is set up, activate your theme from the WordPress admin dashboard. The colors, fonts, and spacings defined in `theme.json` will automatically apply, and the block patterns will be available for use in the Block Editor.
+
+Let me know if you want further customization or specific functionality.
