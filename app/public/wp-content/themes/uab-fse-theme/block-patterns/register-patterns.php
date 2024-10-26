@@ -83,7 +83,7 @@ function uab_fse_theme_register_block_patterns() {
                         <h2 class="wp-block-heading has-dragons-lair-green-color has-text-color">Community</h2>
                         <!-- /wp:heading -->
                         <!-- wp:paragraph -->
-                        <p>Connect with UAB's vibrant community and initiatives.</p>
+                        <p>Connect with UAB\'s vibrant community and initiatives.</p>
                         <!-- /wp:paragraph -->
                         <!-- wp:buttons -->
                         <div class="wp-block-buttons">
