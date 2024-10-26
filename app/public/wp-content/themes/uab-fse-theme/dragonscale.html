@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Scale Design System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-green-800 text-white">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-lg font-semibold">Dragon Scale Design System</div>
+            <nav class="space-x-4 hidden md:flex">
+                <a href="#" class="hover:text-gray-300">Joomla Essentials</a>
+                <a href="#" class="hover:text-gray-300">Design Basics</a>
+                <a href="#" class="hover:text-gray-300">Template Elements</a>
+                <a href="#" class="hover:text-gray-300">Positions</a>
+                <a href="#" class="hover:text-gray-300">Components</a>
+                <a href="#" class="hover:text-gray-300">Example Pages</a>
+            </nav>
+            <button class="text-white md:hidden">☰</button>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="relative bg-white">
+        <img src="https://picsum.photos/1500/500" alt="Banner Image" class="w-full h-64 object-cover">
+        <div class="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 text-white">
+            <h1 class="text-3xl font-bold">This is the banner title</h1>
+            <p class="text-lg mt-2">this is the banner description</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="underline">Link 1</a>
+                <a href="#" class="underline">Link 2</a>
+                <a href="#" class="underline">Link 3</a>
+                <a href="#" class="underline">Link 4</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="container mx-auto my-8">
+        <div class="grid md:grid-cols-3 gap-4">
+            <!-- Content Blocks -->
+            <div class="bg-gray-300 w-full h-64 flex justify-center items-center">
+                <img src="https://picsum.photos/500/400" alt="Placeholder Image" class="object-cover w-full h-full">
+            </div>
+            <div>
+                <h2 class="text-xl font-semibold">Heading</h2>
+                <p class="text-gray-700 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu sapien eget neque sodales pulvinar et ut velit. Vestibulum porta non enim nec auctor.</p>
+                <button class="mt-4 px-4 py-2 bg-green-800 text-white rounded">Button</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="bg-white py-8">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-center mb-6">Latest News</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <!-- News Card 1 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="https://picsum.photos/400/300" alt="News Image" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">Biology professor honored with Award of Excellence</h3>
+                        <p class="text-gray-600 mt-2">for his contributions to algae research</p>
+                    </div>
+                </div>
+                <!-- News Card 2 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="https://picsum.photos/400/300" alt="News Image" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">UAB graduate student awarded research scholarship</h3>
+                        <p class="text-gray-600 mt-2">to study biology of aging</p>
+                    </div>
+                </div>
+                <!-- News Card 3 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <img src="https://picsum.photos/400/300" alt="News Image" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold">UAB’s 12 new construction and renovation projects</h3>
+                        <p class="text-gray-600 mt-2">transforming campus, supporting initiatives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="bg-gray-100 py-8">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-semibold text-center mb-6">Upcoming Events</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <!-- Event Card 1 -->
+                <div class="bg-white shadow-md rounded-lg p-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="text-green-800 font-bold text-2xl">OCT</div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Dept of Biology Seminar</h3>
+                            <p class="text-gray-600">Presented by Dr. Rick Randolph</p>
+                            <p class="text-gray-500 text-sm mt-1">Tuesday, October 28 | 12:15 pm</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat similar blocks for other event cards with different dates and descriptions -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback and Developer Section -->
+    <section class="bg-white py-8 text-center">
+        <div class="container mx-auto flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0">
+            <a href="#" class="text-green-800 underline">Let us know what you think! Feedback</a>
+            <a href="#" class="text-green-800 underline">Are you a developer or advanced Joomla user? Request Access to Developer Resources</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-8">
+        <div class="container mx-auto grid md:grid-cols-4 gap-8">
+            <!-- Contact Info -->
+            <div>
+                <h3 class="font-semibold">University Relations</h3>
+                <p>Administration Building 660<br>1720 2ND Avenue South<br>Birmingham, AL 35294-0106</p>
+                <button class="mt-4 px-4 py-2 bg-gray-700 rounded">Contact Us</button>
+            </div>
+            <!-- Resources -->
+            <div>
+                <h3 class="font-semibold">Resources</h3>
+                <ul class="mt-2 space-y-2">
+                    <li><a href="#" class="underline">Web Accessibility</a></li>
+                    <li><a href="#" class="underline">Joomla Training</a></li>
+                    <li><a href="#" class="underline">Website Request Form</a></li>
+                    <li><a href="#" class="underline">Web Support</a></li>
+                    <li><a href="#" class="underline">Web Forms</a></li>
+                    <li><a href="#" class="underline">Logo Use & Guidelines</a></li>
+                </ul>
+            </div>
+            <!-- About UAB -->
+            <div>
+                <h3 class="font-semibold">About UAB</h3>
+                <ul class="mt-2 space-y-2">
+                    <li><a href="#" class="underline">Apply</a></li>
+                    <li><a href="#" class="underline">Degrees</a></li>
+                    <li><a href="#" class="underline">Give</a></li>
+                    <li><a href="#" class="underline">News</a></li>
+                    <li><a href="#" class="underline">Events</a></li>
+                    <li><a href="#" class="underline">Careers</a></li>
+                    <li><a href="#" class="underline">Alumni</a></li>
+                </ul>
+            </div>
+            <!-- Privacy Policy -->
+            <div>
+                <h3 class="font-semibold">Privacy at UAB</h3>
+                <p class="mt-2 text-sm">We use cookies to improve your site, personalize content, and save more relevant advertising on other platforms.</p>
+                <button class="mt-4 px-4 py-2 bg-gray-700 rounded">Find out more</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
